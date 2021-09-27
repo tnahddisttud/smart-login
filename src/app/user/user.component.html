@@ -1,0 +1,181 @@
+<div class="page-holder align-items-center py-4 bg-gray-100 vh-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 px-lg-4">
+        <div class="card">
+          <div class="card-body p-lg-5">
+            <form [formGroup]="profileForm">
+              <div class="container" id="insitute" *ngIf="step === 'step1'">
+                <form>
+                  <h2>Select Your Institution</h2>
+                  <select
+                    class="form-control"
+                    (change)="selectChangeHandler($event)"
+                  >
+                    <option value="Monday">HR</option>
+                    <option value="Tuesday">Sales</option>
+                    <option value="Wednesday">Hospital Management</option>
+                    <option value="Thursday">Politics</option>
+                    <option value="Friday">Consultancy</option>
+                    <option value="Friday">Law</option>
+                    <option value="Friday">School or University</option>
+                  </select>
+                  <p></p>
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    (click)="step = 'step2'"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+              <div class="container" *ngIf="step === 'step2'">
+                <form>
+                  <h2>Select Your role</h2>
+                  <select
+                    class="form-control"
+                    (change)="selectChangeHandler($event)"
+                  >
+                    <option value="Monday">Engineer</option>
+                    <option value="Tuesday">Sales</option>
+                    <option value="Wednesday">Doctor</option>
+                    <option value="Thursday">CA</option>
+                    <option value="Friday">Lawyer</option>
+                    <option value="Friday">Teacher</option>
+                    <option value="Friday">Businessman</option>
+                  </select>
+                  <p></p>
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    (click)="step = 'step3'"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+              <div class="container" *ngIf="step === 'step3'">
+                <form>
+                  <h2>Select Your Company Size</h2>
+                  <select
+                    class="form-control"
+                    (change)="selectChangeHandler($event)"
+                  >
+                    <option value="Monday">0-10</option>
+                    <option value="Tuesday">11-25</option>
+                    <option value="Wednesday">26-50</option>
+                    <option value="Thursday">51-100</option>
+                    <option value="Friday">101-250</option>
+                    <option value="Friday">251-500</option>
+                    <option value="Friday">500+</option>
+                  </select>
+                  <p></p>
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    (click)="step = 'step4'"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+              <div class="container" *ngIf="step === 'step4'">
+                <form>
+                  <h2>Write your company's name</h2>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name=""
+                    placeholder="Ex:Google"
+                  />
+                  <p></p>
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    (click)="step = 'step5'"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+              <div class="container" *ngIf="step === 'step5'">
+                <form>
+                  <h2>Write your company's website</h2>
+                  <input
+                    class="form-control"
+                    type="url"
+                    name=""
+                    placeholder="Ex:http://smarttask.io"
+                  />
+                  <p></p>
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    (click)="step = 'step6'"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </form>
+            <div class="container" *ngIf="step === 'step6'">
+              <h1>Thankyou For Joining SmartTask!🥳</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-6 col-xl-5 ms-xl-auto px-lg-4 text-center text-primary"
+      >
+        <img
+          class="img-fluid mb-4"
+          width="100%"
+          src="./assets/images/users/org.svg"
+          *ngIf="step === 'step1'"
+        />
+        <img
+          class="img-fluid mb-4"
+          width="100%"
+          src="./assets/images/users/role.svg"
+          *ngIf="step === 'step2'"
+        />
+        <img
+          class="img-fluid mb-4"
+          width="100%"
+          src="./assets/images/users/size.svg"
+          *ngIf="step === 'step3'"
+        />
+        <img
+          class="img-fluid mb-4"
+          width="100%"
+          src="./assets/images/users/name.svg"
+          *ngIf="step === 'step4'"
+        />
+        <img
+          class="img-fluid mb-4"
+          width="100%"
+          src="./assets/images/users/website.svg"
+          *ngIf="step === 'step5'"
+        />
+        <div *ngIf="step === 'step6'">
+          <img
+            class="img-fluid mb-4"
+            width="100%"
+            src="./assets/images/users/thankyou.svg"
+          />
+          <p class="lead text-muted">
+            An,email has been send to your registered mail id.📧 Please click
+            Yes on the verification mail so that we can proceed further!🧑‍💻
+          </p>
+        </div>
+        <!-- <h1 class="mb-4">SmartTask.io<br class="d-none d-lg-inline" /></h1>
+          <p class="lead text-muted">
+            Simple yet Powerful enough to handle all business operations. Track
+            tasks, projects, customer interactions and stay connected with
+            team's progress!🤩
+          </p> -->
+      </div>
+    </div>
+  </div>
+</div>

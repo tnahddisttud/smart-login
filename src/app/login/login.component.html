@@ -1,0 +1,173 @@
+<div class="page-holder align-items-center py-4 bg-gray-100 vh-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 px-lg-4" *ngIf="userlogin">
+        <div class="card">
+          <div class="card-header px-lg-5">
+            <div class="card-heading">
+              <img
+                src="./assets/images/logo/smarttask-icon.webp"
+                alt=""
+                width="30"
+              />
+              <span class="brand">SmartTask</span>
+            </div>
+          </div>
+          <div class="card-body p-lg-5">
+            <h3 class="mb-4">Hi, welcome back! 👋👋</h3>
+
+            <form id="loginForm" action="index.html">
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="floatingInput"
+                  type="email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="floatingPassword"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="remember"
+                  id="remember"
+                />
+                <label class="form-check-label" for="remember"
+                  >Remember me</label
+                >
+              </div>
+              <button
+                class="btn btn-primary"
+                type="button"
+                (click)="navigate('user')"
+              >
+                Submit
+              </button>
+              <a role="button" style="text-transform: none">
+                <img
+                  width="20px"
+                  style="margin-bottom: 3px; margin-left: 15px"
+                  alt="Google sign-in"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                />
+              </a>
+            </form>
+          </div>
+          <div class="card-footer px-lg-5 py-lg-4">
+            <div class="text-sm text-muted">
+              Don't have an account? <a (click)="user_register()">Register</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- register -->
+      <div class="col-lg-6 px-lg-4" *ngIf="userregister">
+        <div class="card">
+          <div class="card-header px-lg-5">
+            <div class="card-heading text-primary">
+              <img
+                src="./assets/images/logo/smarttask-icon.webp"
+                alt=""
+                width="30"
+              />
+              <span class="brand">SmartTask</span>
+            </div>
+          </div>
+          <div class="card-body p-lg-5">
+            <h3 class="mb-4">Get started with SmartTask</h3>
+
+            <form action="index.html">
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="username"
+                  type="email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="username">Username</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="floatingInput"
+                  type="email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="floatingPassword"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="agree"
+                  id="agree"
+                />
+                <label class="form-check-label" for="agree"
+                  >I agree with the <a href="#">Terms & Conditions</a>.</label
+                >
+              </div>
+              <div class="form-group">
+                <button
+                  class="btn btn-primary"
+                  id="register"
+                  type="button"
+                  name="registerSubmit"
+                  (click)="navigate('user')"
+                >
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer px-lg-5 py-lg-4">
+            <div class="text-sm text-muted">
+              Already have an account? <a (click)="user_login()">Login</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-6 col-xl-5 ms-xl-auto px-lg-4 text-center text-primary"
+      >
+        <div>
+          <img
+            class="img-fluid mb-4"
+            width="300"
+            src="./assets/images/undraw_remotely_2j6y.svg"
+            alt=""
+          />
+          <h1 class="mb-4">SmartTask.io<br class="d-none d-lg-inline" /></h1>
+          <p class="lead text-muted">
+            Simple yet Powerful enough to handle all business operations. Track
+            tasks, projects, customer interactions and stay connected with
+            team's progress!🤩
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
